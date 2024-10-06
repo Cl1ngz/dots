@@ -1,0 +1,14 @@
+[Added Associations]
+text/plain=code-oss.desktop;
+video/mp4=vlc.desktop;
+inode/directory=code-oss.desktop;nsxiv.desktop;
+image/png=nsxiv.desktop;swappy.desktop;
+image/jpeg=gimp.desktop;swappy.desktop;
+application/x-shellscript=code-oss.desktop;
+application/x-zerosize=code-oss.desktop;
+video/x-matroska=vlc.desktop;
+application/vnd.efi.iso=org.gnome.FileRoller.desktop;
+
+[Default Applications]
+image/jpeg=swappy.desktop
+application/x-zerosize=code-oss.desktop

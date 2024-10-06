@@ -1,0 +1,7 @@
+# GIMP gimp-iscissors-tool options
+
+(feather yes)
+(feather-radius 16.399999999999999)
+(interactive yes)
+
+# end of gimp-iscissors-tool options
