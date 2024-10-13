@@ -1,0 +1,47 @@
+return {
+    "rebelot/kanagawa.nvim",
+    priority = 1000,
+    config = function()
+      local transparent = false -- Set to true if you want transparency
+      local style = "dragon"    -- Choose the darkest "dragon" style
+  
+      require("kanagawa").setup({
+        theme = style,  -- Set the theme style to "dragon" for the darkest variant
+        transparent = transparent,
+        colors = {
+          theme = {
+            all = {
+              ui = {
+                bg = "#0D0C1F",   -- Very dark background to reduce eye strain
+                bg_gutter = "#0B0913",
+                bg_visual = "#2B2937",
+                bg_search = "#48475B",
+                bg_popup = "#1E1E2E",
+                bg_status = "#0D0C1F",
+                fg = "#E4E6E9",   -- Light foreground for good readability
+                fg_dark = "#A9AAB4",
+                fg_gutter = "#5A5A68",
+                border = "#303040",
+              }
+            }
+          }
+        },
+        overrides = function(colors)
+          local theme = colors.theme
+          return {
+            Normal = { bg = transparent and "NONE" or theme.ui.bg, fg = theme.ui.fg },
+            Visual = { bg = theme.ui.bg_visual },
+            Search = { bg = theme.ui.bg_search },
+            StatusLine = { bg = theme.ui.bg_status, fg = theme.ui.fg },
+            VertSplit = { fg = theme.ui.border },
+            LineNr = { fg = theme.ui.fg_gutter },
+            -- Additional highlight groups can be customized here if needed
+          }
+        end,
+      })
+  
+      -- Apply the colorscheme
+      vim.cmd("colorscheme kanagawa-" .. style)
+    end,
+  }
+  
