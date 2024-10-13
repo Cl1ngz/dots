@@ -37,6 +37,7 @@ return {
 
         -- Lua
         "lua_ls", -- Lua LSP
+        "luacheck",
 
         -- Python
         "pyright", -- Python LSP
