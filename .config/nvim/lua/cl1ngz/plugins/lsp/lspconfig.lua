@@ -131,6 +131,14 @@ return {
           },
         })
       end,
+      ["clang"] = function()
+        lspconfig["clangd"].setup({
+          capabilities = capabilities,
+          cmd = { "clangd", "--background-index" },
+          root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+          single_file_support = true,
+        })
+      end,
     })
   end,
 }
