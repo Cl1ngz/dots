@@ -1,0 +1,5 @@
+# Exclude mpd-specific items
+.config/mpd/playlists/
+.config/mpd/database
+# Exclude ncmpcpp-specific items
+.config/ncmpcpp/error.log
