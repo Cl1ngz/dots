@@ -18,10 +18,9 @@ source /usr/share/fzf/completion.bash
 [[ -s "$HOME/.qfc/bin/qfc.sh" ]] && source "$HOME/.qfc/bin/qfc.sh"
 
 # MPD daemon start (if no other user instance exists)
-[ ! -s ~/.config/mpd/pid ] && mpd
-
-
+# [ ! -s ~/.config/mpd/pid ] && mpd
 
 alias v='nvim'
+alias vi='nvim'
 alias vim='nvim'
 alias date='date "+%d-%m-%Y %H:%M:%S"'
