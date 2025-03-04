@@ -1,0 +1,11 @@
+# settings
+
+(GimpGegl-gegl-unsharp-mask-config "2025-01-28 20:53:08"
+    (time 1738093988)
+    (gimp-color-managed yes)
+    (gimp-gamma-hack yes)
+    (std-dev 51.530999999999999)
+    (scale 3.298)
+    (threshold 0))
+
+# end of settings

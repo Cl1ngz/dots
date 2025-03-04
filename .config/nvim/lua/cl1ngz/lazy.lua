@@ -12,7 +12,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
-  { { import = "cl1ngz.plugins" }, { import = "cl1ngz.plugins.lsp" }, { import = "cl1ngz.plugins.languagespecific" } },
+  {
+    { import = "cl1ngz.plugins" },
+    { import = "cl1ngz.plugins.lsp" },
+    { import = "cl1ngz.plugins.languagespecific" },
+    { import = "cl1ngz.plugins.copilot" },
+  },
   {
     checker = {
       enabled = true,

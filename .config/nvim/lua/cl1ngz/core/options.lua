@@ -2,7 +2,9 @@ vim.cmd("let g:netrw_liststyle = 3")
 
 local opt = vim.opt
 
-opt.relativenumber = true -- set to false if you dont want relative 
+opt.mouse = "" -- disabling mouse
+
+opt.relativenumber = true -- set to false if you dont want relative
 opt.number = true -- show line number
 
 -- tabs & indentation
