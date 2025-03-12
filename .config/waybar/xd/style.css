@@ -1,0 +1,109 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(26, 27, 38, 0.75);
+  color: #f6f7fc;
+}
+
+tooltip {
+  background: #1e1e2e;
+  opacity: 0.8;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
+}
+
+tooltip label {
+  color: #cdd6f4;
+}
+
+#workspaces button {
+  padding: 5px;
+  color: #f6f7fc;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  color: #000000;
+  background: #a6e3a1;
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  background: #11111b;
+  color: #cdd6f4;
+  border-radius: 10px;
+}
+
+#custom-lock_screen,
+#custom-light_dark,
+#custom-power_btn,
+#custom-power_profile,
+#custom-weather,
+#custom-myhyprv,
+#window,
+#cpu,
+#disk,
+#custom-updates,
+#memory,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#tray,
+#temperature,
+#workspaces,
+#idle_inhibitor,
+#backlight {
+  background: rgba(21, 18, 27, 0);
+  opacity: 1;
+  padding: 0px 8px;
+  margin: 0px 3px;
+  border: 0px;
+}
+
+#temperature.critical {
+  color: #e92d4d;
+}
+
+#workspaces {
+  padding-right: 0px;
+  padding-left: 5px;
+}
+
+#window {
+  border-radius: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#custom-toggle_bottom_bar {
+  background: rgba(21, 18, 27, 0); /* Transparent background */
+  color: #f6f7fc; /* Text color matching the rest */
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 24px; /* Consistent icon size */
+  font-weight: bold; /* Bold font to match */
+  padding: 0px 8px; /* Same padding as other icons */
+  margin: 0px 3px; /* Same margin as other icons */
+  border: 0px;
+  /* cursor: pointer; */
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for the toggle button */
+#custom-toggle_bottom_bar:hover {
+  background-color: #11111b; /* Dark background on hover */
+  color: #cdd6f4; /* Slightly lighter color on hover */
+  border-radius: 10px; /* Rounded corners on hover */
+  /* transform: scale(1.2); Slight enlargement on hover */
+}

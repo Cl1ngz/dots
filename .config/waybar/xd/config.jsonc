@@ -20,7 +20,7 @@
     "pulseaudio",
     "pulseaudio#microphone",
     "backlight",
-    // "temperature",
+    "temperature",
     "battery",
     "custom/power_profile",
     "tray",

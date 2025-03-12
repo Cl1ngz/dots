@@ -1,1 +1,134 @@
-/home/cl1ngz/.config/HyprV/waybar/style/v4-style-dark.css
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 0;
+}
+
+/* ==============================
+   WAYBAR WINDOW
+============================== */
+window#waybar {
+  background: transparent;
+  color: #ffffff; /* White text for contrast */
+}
+
+/* ==============================
+   TOOLTIP
+============================== */
+tooltip {
+  background: #0a0a0a; /* Slightly lighter than pure black */
+  opacity: 0.8;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #151515; /* Dark border */
+}
+
+tooltip label {
+  color: #ffffff; /* White text inside tooltips */
+}
+
+/* ==============================
+   WORKSPACES
+============================== */
+#workspaces button {
+  padding: 5px;
+  color: #ffffff; /* Default white text */
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  /* Bright red/pink background to mimic the blossoms */
+  background: #ff4f70;
+  color: #000000; /* Black text on bright background */
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  /* Dark hover with red text for a subtle highlight */
+  background: #151515;
+  color: #ff4f70;
+  border-radius: 10px;
+}
+
+/* ==============================
+   MODULES
+============================== */
+#custom-lock_screen,
+#custom-light_dark,
+#custom-power_btn,
+#custom-power_profile,
+#custom-weather,
+#custom-myhyprv,
+#window,
+#cpu,
+#disk,
+#custom-updates,
+#memory,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#tray,
+#temperature,
+#workspaces,
+#idle_inhibitor,
+#backlight {
+  background: rgba(0, 0, 0, 0); /* Fully transparent */
+  opacity: 1;
+  padding: 0px 8px;
+  margin: 0px 3px;
+  border: 0px;
+}
+
+#custom-lock_screen:hover {
+  background: #151515; /* Dark background on hover */
+  color: #ff4f70; /* Red text on hover */
+  border-radius: 10px;
+}
+
+/* Critical temperature in bright red/pink for emphasis */
+#temperature.critical {
+  color: #ff4f70;
+}
+
+/* Adjust workspace padding if you want a bit of spacing */
+#workspaces {
+  padding-right: 0px;
+  padding-left: 5px;
+}
+
+/* Optional: Give the window module a slight rounded corner */
+#window {
+  border-radius: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* ==============================
+   TOGGLE BOTTOM BAR
+============================== */
+#custom-toggle_bottom_bar {
+  background: rgba(0, 0, 0, 0); /* Transparent background */
+  color: #ffffff; /* White text to match the rest */
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 24px; /* Icon size */
+  font-weight: bold;
+  padding: 0px 8px;
+  margin: 0px 3px;
+  border: 0px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Hover effect for the toggle button */
+#custom-toggle_bottom_bar:hover {
+  background-color: #151515; /* Dark background on hover */
+  color: #ff4f70; /* Red text on hover */
+  border-radius: 10px;
+  /* transform: scale(1.2); Uncomment if you want a slight enlarge */
+}
