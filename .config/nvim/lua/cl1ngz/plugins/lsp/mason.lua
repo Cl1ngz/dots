@@ -49,7 +49,7 @@ return {
         "clangd", -- C/C++ LSP
 
         -- Rust
-        "rust_analyzer", -- Rust LSP
+        -- "rust_analyzer", -- Rust LSP
 
         -- Other languages
         "graphql", -- GraphQL
@@ -81,7 +81,7 @@ return {
         "clang-format", -- C/C++ formatter
 
         -- Rust
-        "rustfmt", -- Rust formatter
+        -- "rustfmt", -- Rust formatter
       },
     })
   end,

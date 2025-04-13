@@ -16,7 +16,7 @@ return {
       -- Add linters for C, Rust, Lua, and Bash
       c = { "cppcheck" },
       cpp = { "cppcheck" },
-      rust = { "clippy" },
+      -- rust = { "clippy" },
       lua = { "luacheck" },
       sh = { "shellcheck" },
       bash = { "shellcheck" },

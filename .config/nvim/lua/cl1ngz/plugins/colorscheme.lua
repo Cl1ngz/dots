@@ -1,47 +1,49 @@
 return {
-  "rebelot/kanagawa.nvim",
+  "ribru17/bamboo.nvim",
+  lazy = false,
   priority = 1000,
   config = function()
-    local transparent = false -- Set to true if you want transparency
-    local style = "wave"      -- Choose the "wave" style for a less intense dark theme
+    require("bamboo").setup({
+      style = "multiplex", -- Choose between 'vulgaris' (regular), 'multiplex' (greener), and 'light'
+      toggle_style_key = nil, -- Keybind to toggle theme style. Leave it nil to disable it, or set it to a string, e.g. "<leader>ts"
+      toggle_style_list = { "vulgaris", "multiplex", "light" }, -- List of styles to toggle between
+      transparent = false, -- Show/hide background
+      dim_inactive = false, -- Dim inactive windows/buffers
+      term_colors = true, -- Change terminal color as per the selected theme style
+      ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
+      cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
 
-    require("kanagawa").setup({
-      theme = style,  -- Set the theme style to "wave" for a softer dark experience
-      transparent = transparent,
-      colors = {
-        theme = {
-          all = {
-            ui = {
-              bg = "#1F1F28",   -- Dark but softer background for daytime use
-              bg_gutter = "#2A2A37",
-              bg_visual = "#333342",
-              bg_search = "#5B5E6B",
-              bg_popup = "#242432",
-              bg_status = "#1F1F28",
-              fg = "#DCD7BA",   -- Light foreground, softer on the eyes
-              fg_dark = "#C8C093",
-              fg_gutter = "#6F757E",
-              border = "#484852",
-            }
-          }
-        }
+      -- Change code style ---
+      -- Options are anything that can be passed to the `vim.api.nvim_set_hl` table
+      -- You can also configure styles with a string, e.g. keywords = 'italic,bold'
+      code_style = {
+        comments = { italic = true },
+        conditionals = { italic = true },
+        keywords = {},
+        functions = {},
+        namespaces = { italic = true },
+        parameters = { italic = true },
+        strings = {},
+        variables = {},
       },
-      overrides = function(colors)
-        local theme = colors.theme
-        return {
-          Normal = { bg = transparent and "NONE" or theme.ui.bg, fg = theme.ui.fg },
-          Visual = { bg = theme.ui.bg_visual },
-          Search = { bg = theme.ui.bg_search },
-          StatusLine = { bg = theme.ui.bg_status, fg = theme.ui.fg },
-          VertSplit = { fg = theme.ui.border },
-          LineNr = { fg = theme.ui.fg_gutter },
-          -- Additional highlight groups can be customized here if needed
-        }
-      end,
-    })
 
-    -- Apply the colorscheme
-    vim.cmd("colorscheme kanagawa-" .. style)
+      -- Lualine options --
+      lualine = {
+        transparent = false, -- lualine center bar transparency
+      },
+
+      -- Custom Highlights --
+      colors = {}, -- Override default colors
+      highlights = {}, -- Override highlight groups
+
+      -- Plugins Config --
+      diagnostics = {
+        darker = false, -- darker colors for diagnostic
+        undercurl = true, -- use undercurl instead of underline for diagnostics
+        background = true, -- use background color for virtual text
+      },
+    })
+    require("bamboo").load()
+    vim.cmd("colorscheme bamboo")
   end,
 }
-

@@ -2,7 +2,7 @@ vim.cmd("let g:netrw_liststyle = 3")
 
 local opt = vim.opt
 
-opt.mouse = "" -- disabling mouse
+-- opt.mouse = "" -- disabling mouse
 
 opt.relativenumber = true -- set to false if you dont want relative
 opt.number = true -- show line number

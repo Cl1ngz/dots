@@ -1,10 +1,10 @@
 return {
-  "mrcjkb/rustaceanvim",
-  version = "^5", -- Recommended
-  lazy = false, -- This plugin is already lazy
-  ["rust-analyzer"] = {
-    cargo = {
-      allFeatures = true,
+  "neovim/nvim-lspconfig",
+  opts = {
+    setup = {
+      rust_analyzer = function()
+        return true
+      end,
     },
   },
 }

@@ -7,13 +7,13 @@ return {
 
     -- Dragon Colors
     local colors = {
-      blue = "#65D1FF",        -- Light blue accent
-      green = "#A3D5A9",       -- Softer green for normal state
-      violet = "#B86CE7",      -- Softer violet for visual mode
-      yellow = "#F6C177",      -- Gentle yellow for command mode
-      red = "#F07C7C",         -- Softer red for replace mode
-      fg = "#E4E6E9",          -- Light foreground from Kanagawa
-      bg = "#0D0C1F",          -- Dark background from Kanagawa Dragon
+      blue = "#65D1FF", -- Light blue accent
+      green = "#A3D5A9", -- Softer green for normal state
+      violet = "#B86CE7", -- Softer violet for visual mode
+      yellow = "#F6C177", -- Gentle yellow for command mode
+      red = "#F07C7C", -- Softer red for replace mode
+      fg = "#E4E6E9", -- Light foreground from Kanagawa
+      bg = "#0D0C1F", -- Dark background from Kanagawa Dragon
       inactive_bg = "#0B0913", -- Darker inactive background
     }
 
@@ -70,4 +70,3 @@ return {
     })
   end,
 }
-
