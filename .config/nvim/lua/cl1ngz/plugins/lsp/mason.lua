@@ -1,20 +1,17 @@
 return {
   "williamboman/mason.nvim",
+  lazy = false, -- load Mason at startup to ensure installations are ready
   dependencies = {
-    "williamboman/mason-lspconfig.nvim",
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    "williamboman/mason-lspconfig.nvim", -- Mason extension for LSP
+    "WhoIsSethDaniel/mason-tool-installer.nvim", -- Auto-install tools
   },
   config = function()
-    -- import mason
+    -- import Mason and its extensions
     local mason = require("mason")
-
-    -- import mason-lspconfig
     local mason_lspconfig = require("mason-lspconfig")
-
-    -- import mason-tool-installer
     local mason_tool_installer = require("mason-tool-installer")
 
-    -- enable mason and configure icons
+    -- enable Mason with icons
     mason.setup({
       ui = {
         icons = {
@@ -25,63 +22,54 @@ return {
       },
     })
 
-    -- configure LSP servers to be installed by mason-lspconfig
+    -- ensure these LSP servers are installed (via mason-lspconfig)
     mason_lspconfig.setup({
       ensure_installed = {
-        -- JavaScript/TypeScript
-        "tsserver", -- JavaScript/TypeScript
+        -- Web Dev servers
+        "tsserver", -- TypeScript/JavaScript
         "html", -- HTML
         "cssls", -- CSS
-        "tailwindcss", -- Tailwind CSS
+        "tailwindcss", -- TailwindCSS
         "svelte", -- Svelte
 
-        -- Lua
-        "lua_ls", -- Lua LSP
-        "luacheck",
-
-        -- Python
-        "pyright", -- Python LSP
-
-        -- Bash
-        "bashls", -- Bash LSP
-
-        -- C/C++
-        "clangd", -- C/C++ LSP
-
-        -- Rust
-        -- "rust_analyzer", -- Rust LSP
-
         -- Other languages
+        "lua_ls", -- Lua
+        "pyright", -- Python
+        "bashls", -- Bash
+        "clangd", -- C/C++
         "graphql", -- GraphQL
-        "emmet_ls", -- Emmet (HTML/CSS)
+        "emmet_ls", -- Emmet (for HTML/CSS)
         "prismals", -- Prisma
+        -- (Removed "luacheck" – not an LSP server)
+        -- (Add any other LSP servers you need to install above)
       },
+      -- No handlers here – LSP setup is done in lspconfig.lua
     })
 
-    -- configure tools to be installed by mason-tool-installer
+    -- ensure these tools/formatters are installed (via mason-tool-installer)
     mason_tool_installer.setup({
       ensure_installed = {
-        -- JavaScript/TypeScript
-        "prettier", -- Prettier formatter
-        "eslint_d", -- ESLint linter
+        -- Web Dev tools
+        "prettier", -- Formatter for JS/TS/CSS/HTML
+        "eslint_d", -- Linter for JS/TS
 
         -- Lua
         "stylua", -- Lua formatter
+        -- "luacheck", -- (Optional: Lua linter, if needed)
 
         -- Python
-        "isort", -- Python import sorter
-        "black", -- Python formatter
-        "pylint", -- Python linter
+        "isort", -- Import sorter
+        "black", -- Formatter
+        "pylint", -- Linter
 
-        -- Bash
+        -- Shell
         "shellcheck", -- Bash linter
         "shfmt", -- Bash formatter
 
         -- C/C++
         "clang-format", -- C/C++ formatter
 
-        -- Rust
-        -- "rustfmt", -- Rust formatter
+        -- (Add any additional formatters/linters as needed)
       },
     })
   end,

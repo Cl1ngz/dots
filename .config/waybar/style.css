@@ -1,3 +1,5 @@
+@import "wallust/colors-waybar.css";
+
 * {
   border: none;
   border-radius: 0;
@@ -11,24 +13,24 @@
    WAYBAR WINDOW
 ============================== */
 window#waybar {
-  background: transparent;
-  color: #ffffff; /* White text for contrast */
+  background: @background;
+  color: @foreground;
 }
 
 /* ==============================
    TOOLTIP
 ============================== */
 tooltip {
-  background: #0a0a0a; /* Slightly lighter than pure black */
-  opacity: 0.8;
+  background: @background;
+  opacity: 1;
   border-radius: 10px;
   border-width: 2px;
   border-style: solid;
-  border-color: #151515; /* Dark border */
+  border-color: @color2;
 }
 
 tooltip label {
-  color: #ffffff; /* White text inside tooltips */
+  color: @foreground;
 }
 
 /* ==============================
@@ -36,21 +38,19 @@ tooltip label {
 ============================== */
 #workspaces button {
   padding: 5px;
-  color: #ffffff; /* Default white text */
+  color: @color6;
   margin-right: 5px;
 }
 
 #workspaces button.active {
-  /* Bright red/pink background to mimic the blossoms */
-  background: #ff4f70;
-  color: #000000; /* Black text on bright background */
+  background: @color2;
+  color: @color7;
   border-radius: 10px;
 }
 
 #workspaces button:hover {
-  /* Dark hover with red text for a subtle highlight */
-  background: #151515;
-  color: #ff4f70;
+  background: @color0;
+  color: @color1;
   border-radius: 10px;
 }
 
@@ -77,7 +77,7 @@ tooltip label {
 #workspaces,
 #idle_inhibitor,
 #backlight {
-  background: rgba(0, 0, 0, 0); /* Fully transparent */
+  background: rgba(0, 0, 0, 0);
   opacity: 1;
   padding: 0px 8px;
   margin: 0px 3px;
@@ -85,23 +85,20 @@ tooltip label {
 }
 
 #custom-lock_screen:hover {
-  background: #151515; /* Dark background on hover */
-  color: #ff4f70; /* Red text on hover */
+  background: @color2;
+  color: @color5;
   border-radius: 10px;
 }
 
-/* Critical temperature in bright red/pink for emphasis */
 #temperature.critical {
-  color: #ff4f70;
+  color: @color3;
 }
 
-/* Adjust workspace padding if you want a bit of spacing */
 #workspaces {
   padding-right: 0px;
   padding-left: 5px;
 }
 
-/* Optional: Give the window module a slight rounded corner */
 #window {
   border-radius: 10px;
   margin-left: 0px;
@@ -112,10 +109,10 @@ tooltip label {
    TOGGLE BOTTOM BAR
 ============================== */
 #custom-toggle_bottom_bar {
-  background: rgba(0, 0, 0, 0); /* Transparent background */
-  color: #ffffff; /* White text to match the rest */
+  background: rgba(0, 0, 0, 0);
+  color: @foreground;
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 24px; /* Icon size */
+  font-size: 24px;
   font-weight: bold;
   padding: 0px 8px;
   margin: 0px 3px;
@@ -125,10 +122,8 @@ tooltip label {
     transform 0.2s ease;
 }
 
-/* Hover effect for the toggle button */
 #custom-toggle_bottom_bar:hover {
-  background-color: #151515; /* Dark background on hover */
-  color: #ff4f70; /* Red text on hover */
+  background-color: @color0;
+  color: @color1;
   border-radius: 10px;
-  /* transform: scale(1.2); Uncomment if you want a slight enlarge */
 }

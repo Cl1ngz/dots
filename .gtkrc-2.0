@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/cl1ngz/.gtkrc-2.0.mine"
-gtk-theme-name="Adwaita-dark"
+gtk-theme-name="AxWal"
 gtk-icon-theme-name="Reversal-black-dark"
 gtk-font-name="MesloLGMDZ Nerd Font 11"
 gtk-cursor-theme-name="Simp1e-Mix-Dark"

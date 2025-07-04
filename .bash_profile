@@ -31,7 +31,10 @@ export TEXT_EDITOR="nvim"
 # Set the default PDF viewer
 export PDF_VIEWER="zen-browser"
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+# Variables for custom scripts
+export SCRIPTS_DIR="$HOME/Documents/Scripts"
 
 # MPD daemon start (if no other user instance exists)
 [ ! -s ~/.config/mpd/pid ] && mpd
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc

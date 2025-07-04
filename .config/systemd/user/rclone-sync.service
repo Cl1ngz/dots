@@ -1,0 +1,7 @@
+[Unit]
+Description=Sync Ebooks to Google Drive using rclone
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rclone sync /home/Cl1ngz/Documents/Other/books/ebooks google-drive:ebooks 
+; --log-file /home/YOUR_USERNAME/rclone.log

@@ -12,4 +12,16 @@
 	<startup-notify/>
 	<directories/>
 </action>
+<action>
+	<icon></icon>
+	<name>Set Wallpaper + Theme</name>
+	<submenu></submenu>
+	<unique-id>1744551862292238-1</unique-id>
+	<command>~/Documents/Scripts/set_wallpaper.sh %f
+</command>
+	<description>Set this image as wallpaper and update theme with Wallust</description>
+	<range>*</range>
+	<patterns>*.jpg;*.png;*.jpeg;*.webp</patterns>
+	<image-files/>
+</action>
 </actions>

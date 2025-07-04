@@ -1,9 +1,11 @@
 # GIMP gimp-crop-tool options
 
+(aspect-denominator 1754)
+(aspect-numerator 2480)
 (foreground
-    (color "R'G'B'A double" 32 "\0\0\0\0\0\0\360\77\0\0\0\0\0\0\360\77\0\0\0\0\0\0\360\77\0\0\0\0\0\0\360\77" 0))
-(background
     (color "R'G'B'A double" 32 "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\360\77" 0))
+(background
+    (color "R'G'B'A double" 32 "\0\0\0\0\0\0\360\77\0\0\0\0\0\0\360\77\0\0\0\0\0\0\360\77\0\0\0\0\0\0\360\77" 0))
 (pattern "Pine")
 
 # end of gimp-crop-tool options
